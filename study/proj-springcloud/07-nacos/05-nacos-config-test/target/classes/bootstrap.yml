@@ -1,0 +1,31 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: nacos-config-test
+  cloud:
+    nacos:
+      config:
+        server-addr: http://localhost:8848
+        username: nacos
+        password: nacos
+        namespace: ad82f64a-b1cb-43ad-b67d-1fe093cbc271
+        group: A_GROUP
+        prefix: user-config
+        file-extension: yml
+        shared-configs:
+#          - hooby-config-a.yml
+          - dataId: hooby-config-a.yml
+            group: B_GROUP
+            refresh: true
+  profiles:
+    active: a
+
+#        extension-configs:
+#          - dataId: user-config-a.yml
+#            group: A_GROUP
+#            refresh: true
+#          - dataId: hooby-config-a.yml
+#            group: B_GROUP
+#            refresh: true
+

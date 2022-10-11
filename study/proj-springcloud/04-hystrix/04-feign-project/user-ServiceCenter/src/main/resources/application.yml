@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: user-servicecenter
+eureka:
+  client:
+    service-url:
+      defaultZone: http://hadoop100:8761/eureka
+  instance:
+    hostname: hocalhost
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+feign:
+  hystrix:
+    enabled: true #开启熔断

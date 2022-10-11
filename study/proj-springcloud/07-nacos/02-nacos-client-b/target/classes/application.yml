@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: nacos-client-b
+  cloud:
+    nacos: # \u5982\u679C\u4E0D\u6307\u5B9A\u547D\u540D\u7A7A\u95F4\u4F1A\u9ED8\u8BA4\u6CE8\u518C\u5230public\u91CC\u9762\u53BB \u5982\u679C\u6CA1\u6709\u6307\u5B9A\u5206\u7EC4 \u4F1A\u6CE8\u518C\u5230DEFAULT_GROUP
+      server-addr: localhost:8848 # \u5F80\u8FD9\u4E2A\u5730\u5740\u53BB\u6CE8\u518C\u81EA\u5DF1
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: ad82f64a-b1cb-43ad-b67d-1fe093cbc271
+        group: A_GROUP
+        service: user-service
+

@@ -1,0 +1,1 @@
+cd .. && docker build ./eureka-server -t eureka-server:2.0

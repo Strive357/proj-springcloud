@@ -1,0 +1,17 @@
+
+server:
+  port: 8080
+spring:
+  application:
+    name: login-service
+  redis:
+    host: 192.168.111.100
+    port: 6379
+    database: 1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://hadoop100:8761/eureka
+  instance:
+    hostname: localhost
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}

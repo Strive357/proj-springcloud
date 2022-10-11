@@ -1,0 +1,13 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: order-servicecenter
+eureka:
+  client:
+    service-url:
+      defaultZone: http://hadoop100:8761/eureka
+  instance:
+    hostname: hocalhost
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+

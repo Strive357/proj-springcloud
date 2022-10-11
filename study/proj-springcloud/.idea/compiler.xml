@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="server" />
+        <module name="011-customer-service" />
+        <module name="01-gateway-serve" />
+        <module name="client-c" />
+        <module name="client-b" />
+        <module name="project-domain" />
+        <module name="02-ribbon" />
+        <module name="user-ServiceCenter" />
+        <module name="02-consumer" />
+        <module name="01-order-service" />
+        <module name="order-center" />
+        <module name="01-customer-service" />
+        <module name="03-gateway" />
+        <module name="demo" />
+        <module name="03-teacher-serve" />
+        <module name="03-openfeign" />
+        <module name="07-nacos" />
+        <module name="022-rentcar-service" />
+        <module name="02-rent-car-service" />
+        <module name="01-eureka" />
+        <module name="server-a" />
+        <module name="02-nacos-client-b" />
+        <module name="02-login-service" />
+        <module name="02-user-service" />
+        <module name="04-hystrix" />
+        <module name="server-b" />
+        <module name="01-nacos-client-a" />
+        <module name="01-provider-b" />
+        <module name="01-provider-a" />
+        <module name="common-api" />
+        <module name="04-nacos-config-a" />
+        <module name="05-nacos-config-test" />
+        <module name="client-a" />
+        <module name="06-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="01-eureka-server" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="user-center" target="8" />
+      <module name="user2-center" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="01-customer-service" options="-parameters" />
+      <module name="01-eureka-server" options="-parameters" />
+      <module name="01-gateway-serve" options="-parameters" />
+      <module name="01-order-service" options="-parameters" />
+      <module name="01-provider-a" options="-parameters" />
+      <module name="01-provider-b" options="-parameters" />
+      <module name="011-customer-service" options="-parameters" />
+      <module name="02-consumer" options="-parameters" />
+      <module name="02-login-service" options="-parameters" />
+      <module name="02-rent-car-service" options="-parameters" />
+      <module name="02-user-service" options="-parameters" />
+      <module name="022-rentcar-service" options="-parameters" />
+      <module name="03-teacher-serve" options="-parameters" />
+      <module name="client-a" options="-parameters" />
+      <module name="client-b" options="-parameters" />
+      <module name="client-c" options="-parameters" />
+      <module name="common-api" options="-parameters" />
+      <module name="demo" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="order-center" options="-parameters" />
+      <module name="project-domain" options="-parameters" />
+      <module name="server" options="-parameters" />
+      <module name="server-a" options="-parameters" />
+      <module name="server-b" options="-parameters" />
+      <module name="user-ServiceCenter" options="-parameters" />
+      <module name="user-center" options="-parameters" />
+      <module name="user2-center" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,13 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://pee1:8761/eureka
+  instance: # \u5B9E\u4F8B\u7684\u914D\u7F6E
+    hostname: localhost  # \u4E3B\u673A\u540D\u79F0 \u6216\u8005\u670D\u52A1\u7684ip
+    prefer-ip-address: true # \u4EE5ip\u7684\u5F62\u5F0F\u663E\u793A\u5177\u4F53\u7684\u670D\u52A1\u4FE1\u606F
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
