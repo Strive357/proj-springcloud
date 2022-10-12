@@ -10,7 +10,7 @@ spring:
       password: nacos
       discovery:
         namespace: ad82f64a-b1cb-43ad-b67d-1fe093cbc271
-        group: A_GROUP
+#        group: A_GROUP
     gateway:
       discovery:
         locator:

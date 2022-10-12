@@ -20,9 +20,11 @@
         <module name="order-center" />
         <module name="01-customer-service" />
         <module name="03-gateway" />
+        <module name="08-nacos-login" />
         <module name="demo" />
         <module name="03-teacher-serve" />
         <module name="03-openfeign" />
+        <module name="01-gateway" />
         <module name="07-nacos" />
         <module name="022-rentcar-service" />
         <module name="02-rent-car-service" />
@@ -34,17 +36,21 @@
         <module name="04-hystrix" />
         <module name="server-b" />
         <module name="01-nacos-client-a" />
+        <module name="02-client-a" />
         <module name="01-provider-b" />
         <module name="01-provider-a" />
         <module name="common-api" />
         <module name="04-nacos-config-a" />
         <module name="05-nacos-config-test" />
+        <module name="08-nac0s-login" />
         <module name="client-a" />
+        <module name="03-login-service" />
         <module name="06-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="01-eureka-server" target="1.8" />
+      <module name="08-nac0s-login" target="1.8" />
       <module name="eureka-server" target="1.8" />
       <module name="user-center" target="8" />
       <module name="user2-center" target="8" />

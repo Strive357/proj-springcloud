@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: client-a
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: cc4b2bda-cc4e-48f5-acfa-151dc7b9b1ea
+        group: A_GROUP
