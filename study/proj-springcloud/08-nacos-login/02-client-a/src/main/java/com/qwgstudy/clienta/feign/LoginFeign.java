@@ -2,10 +2,11 @@ package com.qwgstudy.clienta.feign;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(value = "login-service")
 public interface LoginFeign {
 
     @GetMapping("login")
-    public String login();
+    String login(@RequestParam("username") String username, @RequestParam("password") String password);
 }

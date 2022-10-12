@@ -48,6 +48,8 @@
     <file url="file://$PROJECT_DIR$/08-nacos-login/02-client-a/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/08-nacos-login/03-login-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/08-nacos-login/03-login-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-nacos-login/04-teach-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-nacos-login/04-teach-service/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

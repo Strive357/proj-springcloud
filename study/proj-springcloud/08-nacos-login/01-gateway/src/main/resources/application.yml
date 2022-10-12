@@ -19,9 +19,19 @@ spring:
       enabled: true
       routes:
         - id: login-service-routes
-          uri: lb://login-service # uri\u7EDF\u4E00\u8D44\u6E90\u5B9A\u4F4D\u7B26   url \u7EDF\u4E00\u8D44\u6E90\u6807\u8BC6\u7B26lb://login-service \u7B2C\u4E8C\u79CDhttp://localhost:8989
+          uri: lb://client-a # uri\u7EDF\u4E00\u8D44\u6E90\u5B9A\u4F4D\u7B26   url \u7EDF\u4E00\u8D44\u6E90\u6807\u8BC6\u7B26lb://login-service \u7B2C\u4E8C\u79CDhttp://localhost:8080
           predicates: # \u65AD\u8A00\u662F\u7ED9\u67D0\u4E00\u4E2A\u8DEF\u7531\u6765\u8BBE\u5B9A\u7684\u4E00\u79CD\u5339\u914D\u89C4\u5219 \u9ED8\u8BA4\u4E0D\u80FD\u4F5C\u7528\u5728\u52A8\u6001\u8DEF\u7531\u4E0A
-            - Path=/login  # \u5339\u914D\u89C4\u5219  \u53EA\u8981\u4F60Path\u5339\u914D\u4E0A\u4E86/doLogin \u5C31\u5F80 uri \u8F6C\u53D1 \u5E76\u4E14\u5C06\u8DEF\u5F84\u5E26\u4E0A
+            - Path=/doLogin,/doTeach # \u5339\u914D\u89C4\u5219  \u53EA\u8981\u4F60Path\u5339\u914D\u4E0A\u4E86/doLogin \u5C31\u5F80 uri \u8F6C\u53D1 \u5E76\u4E14\u5C06\u8DEF\u5F84\u5E26\u4E0A
             - After=2022-03-22T08:42:59.521+08:00[Asia/Shanghai]
             - Method=GET,POST
+          filters:
+            - name: RequestRateLimiter  # \u8FD9\u4E2A\u662F\u8FC7\u6EE4\u5668\u7684\u540D\u79F0
+              args: # \u8FD9\u4E2A\u8FC7\u6EE4\u5668\u7684\u53C2\u6570
+                key-resolver: '#{@ipKeyResolver}' # \u901A\u8FC7spel\u8868\u8FBE\u5F0F\u53D6 ioc\u5BB9\u5668\u4E2Dbean\u7684\u503C
+                redis-rate-limiter.replenishRate: 1  # \u751F\u6210\u4EE4\u724C\u7684\u901F\u5EA6
+                redis-rate-limiter.burstCapacity: 3  # \u6876\u5BB9\u91CF
+  redis:
+    host: 192.168.111.100
+    port: 6379
+    database: 1
 

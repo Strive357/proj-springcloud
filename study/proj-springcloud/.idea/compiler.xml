@@ -12,6 +12,7 @@
         <module name="01-gateway-serve" />
         <module name="client-c" />
         <module name="client-b" />
+        <module name="04-teach-service" />
         <module name="project-domain" />
         <module name="02-ribbon" />
         <module name="user-ServiceCenter" />

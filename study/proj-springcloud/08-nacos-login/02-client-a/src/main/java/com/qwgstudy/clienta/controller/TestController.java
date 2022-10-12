@@ -13,8 +13,8 @@ public class TestController {
     @Resource
     private LoginFeign loginFeign;
 
-    @GetMapping("test")
-        public String test(){
-            return loginFeign.login();
-        }
+//    @GetMapping("test")
+//        public String test(){
+//            return loginFeign.login();
+//        }
 }
